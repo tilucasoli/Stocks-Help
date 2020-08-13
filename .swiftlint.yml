@@ -1,0 +1,7 @@
+disabled_rules: # rule identifiers to exclude from running
+  - colon
+  - comma
+  - control_statement
+  - trailing_whitespace
+  - line_length
+  - unused_closure_parameter

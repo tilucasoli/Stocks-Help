@@ -13,4 +13,5 @@ extension UIColor {
     static let redSH = UIColor(red: 255, green: 92, blue: 105, alpha: 1)
     static let backgroundSH = UIColor(red: 249, green: 247, blue: 244, alpha: 1)
     static let textColorSH = UIColor(red: 29, green: 35, blue: 67, alpha: 1)
+    
 }
