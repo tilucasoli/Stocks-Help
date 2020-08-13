@@ -17,6 +17,7 @@
 		03C2F97124E560D3007C23A9 /* Stocks_HelpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2F97024E560D3007C23A9 /* Stocks_HelpUITests.swift */; };
 		03C2F98324E5686A007C23A9 /* ProjectColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2F98224E5686A007C23A9 /* ProjectColors.swift */; };
 		03C2F98624E5729E007C23A9 /* NewOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2F98524E5729E007C23A9 /* NewOperation.swift */; };
+		03C2F98824E575FD007C23A9 /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2F98724E575FD007C23A9 /* BalanceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		03C2F97224E560D3007C23A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03C2F98224E5686A007C23A9 /* ProjectColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectColors.swift; sourceTree = "<group>"; };
 		03C2F98524E5729E007C23A9 /* NewOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOperation.swift; sourceTree = "<group>"; };
+		03C2F98724E575FD007C23A9 /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 		03C2F97F24E56838007C23A9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				03C2F98724E575FD007C23A9 /* BalanceView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				03C2F94C24E560D2007C23A9 /* AppDelegate.swift in Sources */,
 				03C2F98324E5686A007C23A9 /* ProjectColors.swift in Sources */,
 				03C2F94E24E560D2007C23A9 /* SceneDelegate.swift in Sources */,
+				03C2F98824E575FD007C23A9 /* BalanceView.swift in Sources */,
 				03C2F98624E5729E007C23A9 /* NewOperation.swift in Sources */,
 				03C2F95624E560D2007C23A9 /* Stocks_Help.xcdatamodeld in Sources */,
 			);

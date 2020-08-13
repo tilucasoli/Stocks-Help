@@ -9,11 +9,13 @@
 import UIKit
 
 class Patrimony: UIViewController {
-
+    let balanceView = BalanceView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLargeTitle()
         setupNavControllerButton()
+        setupBalanceView()
         view.backgroundColor = .backgroundSH
         // Do any additional setup after loading the view.
     }
@@ -35,6 +37,16 @@ class Patrimony: UIViewController {
     @objc func pushAddOperation() {
         let newOperationVC = NewOperation()
         navigationController?.pushViewController(newOperationVC, animated: true)
+    }
+    
+    func setupBalanceView() {
+        balanceView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(balanceView)
+        
+        NSLayoutConstraint.activate([
+            balanceView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            balanceView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 16)
+        ])
     }
 
 }
