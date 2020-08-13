@@ -16,6 +16,7 @@
 		03C2F96624E560D3007C23A9 /* Stocks_HelpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2F96524E560D3007C23A9 /* Stocks_HelpTests.swift */; };
 		03C2F97124E560D3007C23A9 /* Stocks_HelpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2F97024E560D3007C23A9 /* Stocks_HelpUITests.swift */; };
 		03C2F98324E5686A007C23A9 /* ProjectColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2F98224E5686A007C23A9 /* ProjectColors.swift */; };
+		03C2F98624E5729E007C23A9 /* NewOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C2F98524E5729E007C23A9 /* NewOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		03C2F97024E560D3007C23A9 /* Stocks_HelpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stocks_HelpUITests.swift; sourceTree = "<group>"; };
 		03C2F97224E560D3007C23A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03C2F98224E5686A007C23A9 /* ProjectColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectColors.swift; sourceTree = "<group>"; };
+		03C2F98524E5729E007C23A9 /* NewOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				03C2F94F24E560D2007C23A9 /* Patrimony.swift */,
+				03C2F98524E5729E007C23A9 /* NewOperation.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				03C2F94C24E560D2007C23A9 /* AppDelegate.swift in Sources */,
 				03C2F98324E5686A007C23A9 /* ProjectColors.swift in Sources */,
 				03C2F94E24E560D2007C23A9 /* SceneDelegate.swift in Sources */,
+				03C2F98624E5729E007C23A9 /* NewOperation.swift in Sources */,
 				03C2F95624E560D2007C23A9 /* Stocks_Help.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
