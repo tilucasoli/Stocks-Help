@@ -1,0 +1,6 @@
+framework module Pods_Stocks_Help {
+  umbrella header "Pods-Stocks Help-umbrella.h"
+
+  export *
+  module * { export * }
+}

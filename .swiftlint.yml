@@ -5,3 +5,7 @@ disabled_rules: # rule identifiers to exclude from running
   - trailing_whitespace
   - line_length
   - unused_closure_parameter
+  - force_cast
+
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Pods

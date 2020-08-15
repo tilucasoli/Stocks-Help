@@ -42,7 +42,8 @@ class BalanceView: UIView {
         
         NSLayoutConstraint.activate([
             balance.leftAnchor.constraint(equalTo: leftAnchor),
-            balance.topAnchor.constraint(equalTo: topAnchor)
+            balance.topAnchor.constraint(equalTo: topAnchor),
+            balance.rightAnchor.constraint(equalTo: rightAnchor)
         ])
     }
     
@@ -52,7 +53,8 @@ class BalanceView: UIView {
         
         NSLayoutConstraint.activate([
             totalInvested.topAnchor.constraint(equalTo: balance.bottomAnchor, constant: 4),
-            totalInvested.leftAnchor.constraint(equalTo: balance.leftAnchor)
+            totalInvested.leftAnchor.constraint(equalTo: balance.leftAnchor),
+            totalInvested.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
 }
