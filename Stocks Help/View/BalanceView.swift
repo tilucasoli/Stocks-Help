@@ -14,7 +14,6 @@ class BalanceView: UIView {
         let lbl = UILabel()
         lbl.font = UIFont.systemFont(ofSize: 28, weight: .heavy)
         lbl.textColor = UIColor.purpleSH
-        lbl.text = "R$ 23.640,00"
         return lbl
     }()
     
@@ -22,7 +21,6 @@ class BalanceView: UIView {
         let lbl = UILabel()
         lbl.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
         lbl.textColor = UIColor.textColorSH.withAlphaComponent(0.7)
-        lbl.text = "Total investido: R$ 21.200,00"
         return lbl
     }()
     
@@ -30,10 +28,17 @@ class BalanceView: UIView {
         super.init(frame: frame)
         setupBalanceLbl()
         setupTotalInvested()
+        
+        updateValues()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func updateValues() {
+        balance.text = "R$ \(ListAssets.totalBalance.stringFormatter())"
+        totalInvested.text = "Total investido: R$ \(ListAssets.totalInvested.stringFormatter())"
     }
     
     func setupBalanceLbl() {

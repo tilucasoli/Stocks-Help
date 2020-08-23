@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Patrimony: UIViewController {
+class Patrimony: UIViewController, Background {
     
     let balanceView = BalanceView()
     let pieChartCustom = ChartView()
@@ -23,7 +23,7 @@ class Patrimony: UIViewController {
     
     let tableView: UITableView = {
         let tableView = UITableView()
-        tableView.backgroundColor = .backgroundSH
+        tableView.backgroundColor = .clear
         
         tableView.register(AssetsTableViewCell.self, forCellReuseIdentifier: "Cell")
         tableView.rowHeight = 58 + 8
@@ -37,6 +37,7 @@ class Patrimony: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupImageBackground()
         setupLargeTitle()
         setupNavControllerButton()
         setupBalanceView()
@@ -44,14 +45,20 @@ class Patrimony: UIViewController {
         setupAssetsLbl()
         setupTableView()
         view.backgroundColor = .backgroundSH
-        
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        ListAssets.refreshCurrentPrice()
+        pieChartCustom.updateChartData()
+        tableView.reloadData()
+        balanceView.updateValues()
     }
     
     func setupLargeTitle() {
         title = "Meu Patrimônio"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.textColorSH]
-        
     }
     
     func setupNavControllerButton() {
@@ -120,18 +127,19 @@ class Patrimony: UIViewController {
 
 extension Patrimony: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return ListAssets.list.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! AssetsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? AssetsTableViewCell
         
-        cell.stockCode.text = "AZUL4"
-        cell.stockQuote.text = "R$ 20,00"
-        cell.stockQuotePercentage.text = "11,98%"
-        cell.totalBalance.text = "R$ 20.000,00"
-        cell.totalInvested.text = "R$ 19.000,00"
-        return cell
+        guard let cellValid = cell else {
+            return UITableViewCell()
+        }
+        
+        cellValid.configure(asset: ListAssets.list[indexPath.row])
+        
+        return cellValid
     }
     
 }

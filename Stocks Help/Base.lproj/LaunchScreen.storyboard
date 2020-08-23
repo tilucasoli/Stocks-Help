@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,15 +12,52 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Grupo 677" translatesAutoresizingMaskIntoConstraints="NO" id="vsF-Uc-Cj4">
+                                <rect key="frame" x="0.0" y="698.5" width="414" height="197.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vsF-Uc-Cj4" secondAttribute="height" multiplier="375:179" id="Ruq-xJ-H4K"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Grupo 678" translatesAutoresizingMaskIntoConstraints="NO" id="Xje-VG-LcR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="249.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Xje-VG-LcR" secondAttribute="height" multiplier="375:226" id="woc-tm-vRH"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="gkt-SB-4ro">
+                                <rect key="frame" x="107" y="400" width="200" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="RkB-R7-paB"/>
+                                    <constraint firstAttribute="width" secondItem="gkt-SB-4ro" secondAttribute="height" multiplier="25:12" id="iU3-HX-8zm"/>
+                                    <constraint firstAttribute="height" constant="96" id="wMu-3r-RdR"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97647058823529409" green="0.96862745098039216" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xje-VG-LcR" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="LvQ-rL-mxi"/>
+                            <constraint firstItem="gkt-SB-4ro" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="MLx-kJ-nKE"/>
+                            <constraint firstItem="Xje-VG-LcR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Mhs-BC-JZY"/>
+                            <constraint firstItem="vsF-Uc-Cj4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UnD-ff-HVM"/>
+                            <constraint firstItem="gkt-SB-4ro" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="cic-bp-MAY"/>
+                            <constraint firstItem="Xje-VG-LcR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qNk-uf-Mo8"/>
+                            <constraint firstItem="vsF-Uc-Cj4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sa9-2y-xq1"/>
+                            <constraint firstAttribute="bottom" secondItem="vsF-Uc-Cj4" secondAttribute="bottom" id="xNU-wp-v5b"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.6305418719212"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Grupo 677" width="125" height="59.666667938232422"/>
+        <image name="Grupo 678" width="125" height="75.333335876464844"/>
+        <image name="logo" width="67" height="32.333332061767578"/>
+    </resources>
 </document>

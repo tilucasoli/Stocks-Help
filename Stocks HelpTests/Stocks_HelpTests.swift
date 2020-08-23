@@ -11,6 +11,42 @@ import XCTest
 
 class StocksHelpTests: XCTestCase {
 
+    func test_api_Manager() {
+        let apiManager = APIManager()
+        XCTAssertThrowsError( try apiManager.requestPrice(assetCode: "AZULd"))
+        
+    }
+    
+    func test_VC_New_Operation_creatingAssetsRequest() {
+        // case 1
+        let newOperation = NewOperation()
+        XCTAssertNil(newOperation.creatingAssetRequest())
+        
+        // case 2
+        newOperation.qntyTF.textField.text = "1000"
+        newOperation.priceTF.textField.text = "100"
+        newOperation.assetsTF.textField.text = "AZUL4"
+        
+        XCTAssertEqual(Asset(symbol: "AZUL4", price: 100, qnty: 1000), newOperation.creatingAssetRequest())
+        
+    }
+    
+    func test_VC_New_Operation_buyAndSellLogic() {
+        // case 1
+        let newOperation = NewOperation()
+        
+        newOperation.qntyTF.textField.text = "1000"
+        newOperation.priceTF.textField.text = "100"
+        newOperation.assetsTF.textField.text = "AZUL4"
+        
+        XCTAssertTrue(newOperation.buyAndSellLogic())
+        // case 2
+        newOperation.qntyTF.textField.text = "asd"
+        
+        XCTAssertFalse(newOperation.buyAndSellLogic())
+        
+    }
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }

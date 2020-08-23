@@ -28,25 +28,34 @@ class ChartView: UIView {
         super.init(frame: frame)
         setupPieChart()
         
-        var dataTest = PieChartDataEntry(value: 1)
-        dataTest.label = "AZUL4"
-        var dataList = [dataTest]
-        updateChartData(list: dataList)
-        
+        updateChartData()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func creatingDataSet() -> [PieChartDataEntry] {
+        var dataSetList = [PieChartDataEntry]()
+        
+        for index in 0..<ListAssets.list.count {
+            let asset = ListAssets.list[index]
+            dataSetList += [PieChartDataEntry(value: Double(asset.qnty))]
+            dataSetList[index].label = asset.symbol
+        }
+        
+        return dataSetList
+    }
+    
     //Refatorar essa parte do código
-    func updateChartData(list: [ChartDataEntry]) {
-        let chartDataSet = PieChartDataSet(entries: list, label: "Lucas")
+    func updateChartData() {
+        let chartDataSet = PieChartDataSet(entries: creatingDataSet(), label: "Lucas")
         chartDataSet.selectionShift = 0
         let chartData = PieChartData(dataSet: chartDataSet)
         
-        let colors = [UIColor.redSH]
-        chartDataSet.colors = colors as! [NSUIColor]
+        let colors = [UIColor.redSH, UIColor.purpleSH, UIColor.greenSH]
+        
+        chartDataSet.colors = colors as [NSUIColor]
         
         let formatter = NumberFormatter()
         formatter.numberStyle = .percent

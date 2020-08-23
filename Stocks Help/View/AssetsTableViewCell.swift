@@ -62,7 +62,7 @@ class AssetsTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        backgroundColor = .backgroundSH
+        backgroundColor = .clear
         setupContentWhiteView()
         setupCompanyLogo()
         setupStockCode()
@@ -86,6 +86,14 @@ class AssetsTableViewCell: UITableViewCell {
             contentWhiteView.rightAnchor.constraint(equalTo: rightAnchor),
             contentWhiteView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8)
         ])
+    }
+    
+    func configure(asset: Asset) {
+        stockCode.text = asset.symbol
+        stockQuote.text = "R$ \(asset.currentprice.stringFormatter())"
+        stockQuotePercentage.text = "\(String(format: "%0.2f", asset.changePercent))%".replacingOccurrences(of: ".", with: ",")
+        totalBalance.text = "R$ \(asset.totalBalance.stringFormatter())"
+        totalInvested.text = "R$ \(asset.totalInvested.stringFormatter())"
     }
     
     func setupCompanyLogo() {
@@ -134,7 +142,7 @@ class AssetsTableViewCell: UITableViewCell {
         totalBalance.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            totalBalance.leftAnchor.constraint(equalTo: stockQuote.rightAnchor, constant: 32),
+            totalBalance.rightAnchor.constraint(equalTo: rightAnchor, constant: -16),
             totalBalance.centerYAnchor.constraint(equalTo: stockQuote.centerYAnchor)
         ])
     }
